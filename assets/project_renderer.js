@@ -276,6 +276,29 @@ render_project(
     award_name = null,
 );
 
+render_project(
+    project_name = 'MimicBrush',
+    figure_path = './assets/projects/MimicBrush.png',
+    title_name = 'Zero-shot Image Editing with Reference Imitation',
+    author_list = [
+        'Xi Chen',
+        'Yutong Feng',
+        'Mengting Chen',
+        'Yiyang Wang',
+        'Shilong Zhang',
+        'Yu Liu',
+        'Yujun Shen',
+        'Hengshuang Zhao',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2406.07547'],
+        ['Project', 'https://xavierchen34.github.io/MimicBrush-Page/'],
+        ['Code', 'https://github.com/ali-vilab/MimicBrush'],
+        ['Demo', 'https://huggingface.co/spaces/xichenhku/MimicBrush'],
+    ],
+    award_name = null,
+);
+
 
 
 // Authors.
@@ -285,7 +308,6 @@ render_author('Jinxiang Liu', 'https://scholar.google.com/citations?user=wSRKaWI
 render_author('Qiang Hu');
 render_author('Xiaoyun Zhang', 'https://scholar.google.com.hk/citations?user=0m0aIqsAAAAJ&hl=zh-CN');
 render_author('Yanfeng Wang', 'https://scholar.google.com/citations?user=x_sgJskAAAAJ&hl=zh-CN');
-
 render_author('Bin Feng', 'https://scholar.google.com.hk/citations?user=nRc8u6gAAAAJ&hl=zh-CN');
 render_author('Bo Wang', 'https://scholar.google.com/citations?user=37FDILIAAAAJ&hl=en');
 render_author('Changxin Gao', 'https://scholar.google.com/citations?user=4tku-lwAAAAJ&hl=en');
@@ -297,6 +319,7 @@ render_author('Jinsong Lan');
 render_author('Linyu Xing', 'https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=y19jyMwAAAAJ');
 render_author('Mengting Chen', 'https://scholar.google.com.hk/citations?user=LcoK9ZEAAAAJ&hl=zh-CN');
 render_author('Nong Sang', 'https://scholar.google.com/citations?user=ky_ZowEAAAAJ&hl=zh-CN');
+render_author('Shilong Zhang', 'https://jshilong.github.io/');
 render_author('Shuai Xiao', 'https://sites.google.com/view/xiao-shuai/home');
 render_author('Wenyu Liu', 'https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=zh-CN');
 render_author('Xi Chen', 'https://xavierchen34.github.io/');
@@ -304,6 +327,7 @@ render_author('Xinggang Wang', 'https://scholar.google.com/citations?user=qNCTLV
 render_author('Xuewen Hong');
 render_author('Xinyu Zhang', 'https://scholar.google.co.in/citations?user=M7hnG9oAAAAJ&hl=en');
 render_author('Yifeng Geng',);
+render_author('Yiyang Wang',);
 render_author('Yuxin Fang', 'https://scholar.google.com/citations?user=_Lk0-fQAAAAJ&hl=en');
 render_author('Yu Liu', 'https://scholar.google.com/citations?user=8zksQb4AAAAJ');
 render_author('Yujun Shen', 'https://shenyujun.github.io/');
