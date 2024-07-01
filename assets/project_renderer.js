@@ -188,7 +188,7 @@ render_project(
         'Shuai Xiao',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/pdf/2403.12965'],
+        ['ECCV 2024', 'https://arxiv.org/pdf/2403.12965'],
         ['Project', 'https://mengtingchen.github.io/wear-any-way-page/'],
         ['Media', 'https://mp.weixin.qq.com/s/MWFfUrj_-bitHxgeOtDIKQ'],
     ],
@@ -209,7 +209,7 @@ render_project(
         'Hengshuang Zhao',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/pdf/2312.02928.pdf'],
+        ['ECCV 2024', 'https://arxiv.org/pdf/2312.02928.pdf'],
         ['Project', 'https://xavierchen34.github.io/LivePhoto-Page/'],
         ['Code', 'https://github.com/XavierCHEN34/LivePhoto'],
         ['Demo', 'https://www.youtube.com/watch?v=M2vzrTYAsQI'],
