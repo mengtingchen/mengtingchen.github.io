@@ -168,7 +168,7 @@ render_project(
         'Changxin Gao',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/pdf/2404.17571'],
+        ['ACM Multimedia 2024', 'https://arxiv.org/pdf/2404.17571'],
         ['Project', 'https://mengtingchen.github.io/tunnel-try-on-page/'],
     ],
     award_name = null,
