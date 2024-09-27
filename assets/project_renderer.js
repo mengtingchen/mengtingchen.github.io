@@ -291,7 +291,7 @@ render_project(
         'Hengshuang Zhao',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2406.07547'],
+        ['NeurIPS 2024', 'https://arxiv.org/abs/2406.07547'],
         ['Project', 'https://xavierchen34.github.io/MimicBrush-Page/'],
         ['Code', 'https://github.com/ali-vilab/MimicBrush'],
         ['Demo', 'https://huggingface.co/spaces/xichenhku/MimicBrush'],
