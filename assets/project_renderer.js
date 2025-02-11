@@ -151,6 +151,29 @@ render_project(
 
 
 // Projects.
+render_project(
+    project_name = 'Advancing Myopia To Holism',
+    figure_path = './assets/projects/Advancing_Myopia_To_Holism.jpg',
+    title_name = 'Advancing Myopia To Holism: Fully Contrastive Language-Image Pre-training',
+    author_list = [
+        'Haicheng Wang',
+        'Chen Ju',
+        'Weixiong Lin',
+        'Shuai Xiao',
+        'Mengting Chen',
+        'Yixuan Huang',
+        'Chang Liu',
+        'Mingshuai Yao',
+        'Jinsong Lan',
+        'Ying Chen',
+        'Qingwen Liu',
+        'Yanfeng Wang',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2412.00440'],
+    ],
+    award_name = null,
+);
 
 render_project(
     project_name = 'Tunnel Try-on',
@@ -168,7 +191,7 @@ render_project(
         'Changxin Gao',
     ],
     material_list = [
-        ['ACM Multimedia 2024', 'https://arxiv.org/pdf/2404.17571'],
+        ['ACM Multimedia 2024', 'https://arxiv.org/abs/2404.17571'],
         ['Project', 'https://mengtingchen.github.io/tunnel-try-on-page/'],
     ],
     award_name = null,
@@ -188,7 +211,7 @@ render_project(
         'Shuai Xiao',
     ],
     material_list = [
-        ['ECCV 2024', 'https://arxiv.org/pdf/2403.12965'],
+        ['ECCV 2024', 'https://arxiv.org/abs/2403.12965'],
         ['Project', 'https://mengtingchen.github.io/wear-any-way-page/'],
         ['Media', 'https://mp.weixin.qq.com/s/MWFfUrj_-bitHxgeOtDIKQ'],
     ],
@@ -271,7 +294,7 @@ render_project(
         'Yanfeng Wang',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/pdf/2404.14890'],
+        ['arXiv', 'https://arxiv.org/abs/2404.14890'],
     ],
     award_name = null,
 );
@@ -302,7 +325,13 @@ render_project(
 
 
 // Authors.
+render_author('Yixuan Huang');
+render_author('Chang Liu');
+render_author('Mingshuai Yao');
+render_author('Ying Chen');
+render_author('Qingwen Liu');
 render_author('Haozhe Cheng');
+render_author('Weixiong Lin', 'https://scholar.google.com.hk/citations?user=Ka57qcUAAAAJ&hl=nl');
 render_author('Haicheng Wang', 'https://scholar.google.com/citations?user=x0Uk7S8AAAAJ&hl=zh-CN');
 render_author('Jinxiang Liu', 'https://scholar.google.com/citations?user=wSRKaWIAAAAJ&hl=en');
 render_author('Qiang Hu');
@@ -320,7 +349,7 @@ render_author('Linyu Xing', 'https://scholar.google.com/citations?view_op=list_w
 render_author('Mengting Chen', 'https://scholar.google.com.hk/citations?user=LcoK9ZEAAAAJ&hl=zh-CN');
 render_author('Nong Sang', 'https://scholar.google.com/citations?user=ky_ZowEAAAAJ&hl=zh-CN');
 render_author('Shilong Zhang', 'https://jshilong.github.io/');
-render_author('Shuai Xiao', 'https://sites.google.com/view/xiao-shuai/home');
+render_author('Shuai Xiao');
 render_author('Wenyu Liu', 'https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=zh-CN');
 render_author('Xi Chen', 'https://xavierchen34.github.io/');
 render_author('Xinggang Wang', 'https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en');
