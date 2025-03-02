@@ -170,7 +170,7 @@ render_project(
         'Yanfeng Wang',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2412.00440'],
+        ['CVPR 2025', 'https://arxiv.org/abs/2412.00440'],
     ],
     award_name = null,
 );
