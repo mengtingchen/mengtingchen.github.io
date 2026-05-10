@@ -152,6 +152,79 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'Tstars-Tryon',
+    figure_path = './assets/projects/Tstars-Tryon.png',
+    title_name = 'Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items',
+    author_list = [
+        'Mengting Chen',
+        'Zhengrui Chen',
+        'Yongchao Du',
+        'Zuan Gao',
+        'Taihang Hu',
+        'Jinsong Lan',
+        'Chao Lin',
+        'Yefeng Shen',
+        'Xingjian Wang',
+        'Zhao Wang',
+        'Zhengtao Wu',
+        'Xiaoli Xu',
+        'Zhengze Xu',
+        'Hao Yan',
+        'Mingzhou Zhang',
+        'Jun Zheng',
+        'Qinye Zhou',
+        'Xiaoyong Zhu',
+        'Bo Zheng',
+    ],
+    material_list = [
+        ['Report', 'https://arxiv.org/abs/2604.19748'],
+        ['Benchmark', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/Tstars-VTON'],
+    ],
+    award_name = null,
+);
+
+render_project(
+    project_name = 'iTryOn',
+    figure_path = './assets/projects/itryon.gif',
+    title_name = 'iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance',
+    author_list = [
+        'Jun Zheng',
+        'Zhengze Xu',
+        'Mengting Chen',
+        'Jing Wang',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Kaifu Zhang',
+        'Bo Zheng',
+        'Xiaodan Liang',
+    ],
+    material_list = [
+        ['ICML 2026', 'https://icml.cc/virtual/2026/poster/65275'],
+    ],
+    award_name = null,
+);
+
+render_project(
+    project_name = 'ORION',
+    figure_path = './assets/projects/ORION.jpg',
+    title_name = 'ORION: Decoupling and Alignment for Unified Autoregressive Understanding and Generation',
+    author_list = [
+        'Taihang Hu',
+        'Mengting Chen',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Kaifu Zhang',
+        'Ming-Ming Cheng',
+        'Bo Zheng',
+        'Yaxing Wang',
+    ],
+    material_list = [
+        ['ICLR 2026', 'https://iclr.cc/virtual/2026/poster/10009679'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'Advancing Myopia To Holism',
     figure_path = './assets/projects/Advancing_Myopia_To_Holism.jpg',
     title_name = 'Advancing Myopia To Holism: Fully Contrastive Language-Image Pre-training',
@@ -325,6 +398,29 @@ render_project(
 
 
 // Authors.
+render_author('Jun Zheng');
+render_author('Jing Wang');
+render_author('Xiaodan Liang');
+render_author('Zhengrui Chen');
+render_author('Yongchao Du');
+render_author('Zuan Gao');
+render_author('Chao Lin');
+render_author('Yefeng Shen');
+
+render_author('Xingjian Wang');
+render_author('Xiaoli Xu');
+render_author('Zhengtao Wu');
+render_author('Hao Yan');
+render_author('Mingzhou Zhang');
+render_author('Qinye Zhou');
+
+
+render_author('Xiaoyong Zhu');
+render_author('Kaifu Zhang');
+render_author('Ming-Ming Cheng');
+render_author('Bo Zheng');
+render_author('Yaxing Wang');
+render_author('Taihang Hu');
 render_author('Yixuan Huang');
 render_author('Chang Liu');
 render_author('Mingshuai Yao');
