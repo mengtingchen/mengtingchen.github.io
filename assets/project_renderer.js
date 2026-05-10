@@ -179,6 +179,7 @@ render_project(
     material_list = [
         ['Report', 'https://arxiv.org/abs/2604.19748'],
         ['Benchmark', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/Tstars-VTON'],
+        ['Media', 'https://mp.weixin.qq.com/s/9xsNpPF5bKI3L5V1cRvB_w'],
     ],
     award_name = null,
 );
