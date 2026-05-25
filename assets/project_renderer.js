@@ -25,7 +25,8 @@ function render_project(project_name,
     for (var idx = 0; idx < author_list.length; idx++) {
         if (idx < author_list.length - 1 &&
             (author_list[idx + 1] == 'equal' ||
-                author_list[idx + 1] == 'corresponding')) {
+                author_list[idx + 1] == 'corresponding' ||
+                author_list[idx + 1] == 'project_lead')) {
             author.innerHTML += (
                 '<span name="' +
                 author_list[idx] +
@@ -88,6 +89,8 @@ function render_author(author_name, link = null, alias = null) {
             tailing = '*';
         } else if (contribution === 'corresponding') {
             tailing = '<sup>+<sup>';
+        } else if (contribution === 'project_lead') {
+            tailing = '<sup>&dagger;</sup>';
         }
 
         var context = '';
@@ -157,6 +160,7 @@ render_project(
     title_name = 'Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items',
     author_list = [
         'Mengting Chen',
+        'project_lead',
         'Zhengrui Chen',
         'Yongchao Du',
         'Zuan Gao',
@@ -192,6 +196,7 @@ render_project(
         'Jun Zheng',
         'Zhengze Xu',
         'Mengting Chen',
+        'project_lead',
         'Jing Wang',
         'Jinsong Lan',
         'Xiaoyong Zhu',
@@ -206,12 +211,117 @@ render_project(
 );
 
 render_project(
+    project_name = 'PAE',
+    figure_path = './assets/projects/PAE.jpg',
+    title_name = 'What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion',
+    author_list = [
+        'Zhengrong Yue',
+        'Taihang Hu',
+        'Mengting Chen',
+        'project_lead',
+        'Haiyu Zhang',
+        'Zihao Pan',
+        'Tao Liu',
+        'Zikang Wang',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Bo Zheng',
+        'Yali Wang',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2605.07915'],
+        ['Project', 'https://zhengrongyue.github.io/pae.github.io/'],
+        ['Code', 'https://github.com/ZhengrongYue/PAE'],
+        ['HuggingFace', 'https://huggingface.co/yuezhengrong/PAE-collections'],
+        ['ModelScope', 'https://www.modelscope.cn/models/ZhengrongYue/PAE-Collections'],
+    ],
+    award_name = null,
+);
+
+render_project(
+    project_name = 'FashionChameleon',
+    figure_path = './assets/projects/FashionChameleon.gif',
+    title_name = 'FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization',
+    author_list = [
+        'Quanjian Song',
+        'Yefeng Shen',
+        'Mengting Chen',
+        'project_lead',
+        'Hao Sun',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Bo Zheng',
+        'Liujuan Cao',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2605.15824'],
+        ['Project', 'https://quanjiansong.github.io/projects/FashionChameleon/'],
+        ['Code', 'https://github.com/quanjiansong/FashionChameleon'],
+        ['HuggingFace', 'https://huggingface.co/datasets/QuanjianSong/HGC-Bench'],
+    ],
+    award_name = null,
+);
+
+render_project(
+    project_name = 'CTDM',
+    figure_path = './assets/projects/CTDM.png',
+    title_name = 'Continuous-Time Distribution Matching for Few-Step Diffusion Distillation',
+    author_list = [
+        'Tao Liu',
+        'Hao Yan',
+        'Mengting Chen',
+        'project_lead',
+        'Taihang Hu',
+        'Zhengrong Yue',
+        'Zihao Pan',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Ming-Ming Cheng',
+        'Bo Zheng',
+        'Yaxing Wang',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2605.06376'],
+        ['Project', 'https://byliutao.github.io/cdm_page/'],
+        ['Code', 'https://github.com/byliutao/cdm'],
+    ],
+    award_name = null,
+);
+
+render_project(
+    project_name = 'Beyond-Static-Scenes',
+    figure_path = './assets/projects/Beyond-Static-Scenes.gif',
+    title_name = 'Beyond Static Scenes: Camera-controllable Background Generation for Human Motion',
+    author_list = [
+        'Mingshuai Yao',
+        'Mengting Chen',
+        'project_lead',
+        'Qinye Zhou',
+        'Yabo Zhang',
+        'Ming Liu',
+        'Xiaoming Li',
+        'Shaohui Liu',
+        'Chen Ju',
+        'Shuai Xiao',
+        'Qingwen Liu',
+        'Jinsong Lan',
+        'Wangmeng Zuo',
+    ],
+    material_list = [
+        ['ICME 2026', 'https://arxiv.org/abs/2504.02004'],
+        ['Project', 'https://yaomingshuai.github.io/Beyond-Static-Scenes.github.io/'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'ORION',
     figure_path = './assets/projects/ORION.jpg',
     title_name = 'ORION: Decoupling and Alignment for Unified Autoregressive Understanding and Generation',
     author_list = [
         'Taihang Hu',
         'Mengting Chen',
+        'project_lead',
         'Jinsong Lan',
         'Xiaoyong Zhu',
         'Kaifu Zhang',
@@ -226,36 +336,13 @@ render_project(
 );
 
 render_project(
-    project_name = 'Advancing Myopia To Holism',
-    figure_path = './assets/projects/Advancing_Myopia_To_Holism.jpg',
-    title_name = 'Advancing Myopia To Holism: Fully Contrastive Language-Image Pre-training',
-    author_list = [
-        'Haicheng Wang',
-        'Chen Ju',
-        'Weixiong Lin',
-        'Shuai Xiao',
-        'Mengting Chen',
-        'Yixuan Huang',
-        'Chang Liu',
-        'Mingshuai Yao',
-        'Jinsong Lan',
-        'Ying Chen',
-        'Qingwen Liu',
-        'Yanfeng Wang',
-    ],
-    material_list = [
-        ['CVPR 2025', 'https://arxiv.org/abs/2412.00440'],
-    ],
-    award_name = null,
-);
-
-render_project(
     project_name = 'Tunnel Try-on',
     figure_path = './assets/projects/tunnel-try-on.png',
     title_name = 'Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos',
     author_list = [
         'Zhengze Xu',
         'Mengting Chen',
+        'project_lead',
         'Zhao Wang',
         'Linyu Xing',
         'Zhonghua Zhai',
@@ -354,26 +441,6 @@ render_project(
 );
 
 render_project(
-    project_name = 'DENOISER',
-    figure_path = './assets/projects/DENOISER.jpg',
-    title_name = 'DENOISER: Rethinking the Robustness for Open-Vocabulary Action Recognition',
-    author_list = [
-        'Haozhe Cheng',
-        'Chen Ju',
-        'Haicheng Wang',
-        'Jinxiang Liu',
-        'Mengting Chen',
-        'Qiang Hu',
-        'Xiaoyun Zhang',
-        'Yanfeng Wang',
-    ],
-    material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2404.14890'],
-    ],
-    award_name = null,
-);
-
-render_project(
     project_name = 'MimicBrush',
     figure_path = './assets/projects/MimicBrush.png',
     title_name = 'Zero-shot Image Editing with Reference Imitation',
@@ -422,18 +489,22 @@ render_author('Ming-Ming Cheng');
 render_author('Bo Zheng');
 render_author('Yaxing Wang');
 render_author('Taihang Hu');
-render_author('Yixuan Huang');
-render_author('Chang Liu');
 render_author('Mingshuai Yao');
-render_author('Ying Chen');
 render_author('Qingwen Liu');
-render_author('Haozhe Cheng');
-render_author('Weixiong Lin', 'https://scholar.google.com.hk/citations?user=Ka57qcUAAAAJ&hl=nl');
-render_author('Haicheng Wang', 'https://scholar.google.com/citations?user=x0Uk7S8AAAAJ&hl=zh-CN');
-render_author('Jinxiang Liu', 'https://scholar.google.com/citations?user=wSRKaWIAAAAJ&hl=en');
-render_author('Qiang Hu');
-render_author('Xiaoyun Zhang', 'https://scholar.google.com.hk/citations?user=0m0aIqsAAAAJ&hl=zh-CN');
-render_author('Yanfeng Wang', 'https://scholar.google.com/citations?user=x_sgJskAAAAJ&hl=zh-CN');
+render_author('Tao Liu');
+render_author('Zhengrong Yue');
+render_author('Zihao Pan');
+render_author('Haiyu Zhang');
+render_author('Zikang Wang');
+render_author('Yali Wang');
+render_author('Quanjian Song');
+render_author('Hao Sun');
+render_author('Liujuan Cao');
+render_author('Yabo Zhang');
+render_author('Ming Liu');
+render_author('Xiaoming Li');
+render_author('Shaohui Liu');
+render_author('Wangmeng Zuo');
 render_author('Bin Feng', 'https://scholar.google.com.hk/citations?user=nRc8u6gAAAAJ&hl=zh-CN');
 render_author('Bo Wang', 'https://scholar.google.com/citations?user=37FDILIAAAAJ&hl=en');
 render_author('Changxin Gao', 'https://scholar.google.com/citations?user=4tku-lwAAAAJ&hl=en');

@@ -1,6 +1,9 @@
 body {
   background: #ffffff;
-  color: #000000;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body,
@@ -9,103 +12,138 @@ th,
 tr,
 p,
 a {
-  font-family: Helvetica, Ariel, sans-serif;
-  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto,
+    "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 a,
 a:visited {
-  color: #1772d0;
+  color: #0066cc;
   text-decoration: none;
+  transition: color 0.18s ease;
 }
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #003d80;
   text-decoration: none;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  color: #0a0a0a;
 }
 
 li {
-  margin: 2px 0;
+  margin: 8px 0;
+  line-height: 1.55;
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background-color: #fff4b8;
+  padding: 0 2px;
+  border-radius: 2px;
 }
 span.me {
-  color: #000000;
+  color: #0a0a0a;
   font-weight: 600;
-  font-size: 15px;
+  font-size: inherit;
   text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.2px;
 }
 
 div.title {
-  color: #000000;
+  color: #0a0a0a;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
 }
 div.author {
-  color: #777777;
+  color: #6b7280;
   font-size: 15px;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  line-height: 1.55;
 }
 div.author a:link,
 div.author a:visited {
-  color: #777777;
-  text-decoration: None;
+  color: #6b7280;
+  transition: color 0.18s ease;
 }
 div.author a:hover {
-  color: #f09228;
-  text-decoration: None;
+  color: #0066cc;
+  text-decoration: none;
 }
 div.material {
-  color: #000000;
+  color: #1a1a1a;
   font-size: 15px;
   font-weight: 400;
 }
+div.material a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+div.material a:hover {
+  border-bottom-color: #0066cc;
+}
 div.award {
-  color: #FF0000;
+  color: #dc2626;
   font-size: 15px;
-  font-weight: 400;
-  margin-top: 5px;
+  font-weight: 500;
+  margin-top: 6px;
 }
 
 div.institution {
-  color: #000000;
+  color: #0a0a0a;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  letter-spacing: -0.005em;
 }
 div.period {
-  color: #777777;
+  color: #6b7280;
   font-size: 15px;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 div.position {
-  color: #000000;
+  color: #1a1a1a;
   font-size: 15px;
   font-weight: 400;
 }
 
-/* 定义一个类来设置容器的样式 */
+img {
+  border-radius: 4px;
+}
+
 .circle-mask {
-  width: 250px; /* 图片的宽度 */
-  height: 250px; /* 设定高度与宽度相同以形成圆 */
-  border-radius: 50%; /* 将方形转变为圆形 */
-  overflow: hidden; /* 隐藏容器外的部分 */
-  display: flex; /* 使用flex布局使内容居中 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .circle-mask img {
-  max-width: 100%; /* 确保图片最大宽度不超过容器 */
-  height: auto; /* 保持图片原有的长宽比 */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
 }
