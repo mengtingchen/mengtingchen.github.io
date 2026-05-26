@@ -51,6 +51,18 @@ li {
   line-height: 1.55;
 }
 
+#news-list li.more {
+  display: none;
+}
+#news-list.expanded li.more {
+  display: list-item;
+}
+#news-toggle {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
 span.highlight {
   background-color: #fff4b8;
   padding: 0 2px;

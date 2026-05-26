@@ -42,7 +42,7 @@
         <b>Mengting Chen (Alibaba)</b>
       </p>
       <p style="text-align: justify;">
-        Currently, I am an algorithm researcher at Alibaba. In 2020, I got a Master's degree from the School of Electronic Information and Communications at Huazhong University of Science and Technology, under the guidance of Prof. <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=zh-CN">Wenyu Liu</a> and Prof. <a href="https://xwcv.github.io/index.htm">Xinggang Wang</a>. Prior to this, I received my Bachelor's degree at Huazhong University of Science and Technology in 2017.
+        Currently, I am an algorithm researcher at Alibaba. I received my Master's degree from the School of Electronic Information and Communications at Huazhong University of Science and Technology, under the guidance of Prof. <a href="https://scholar.google.com/citations?user=D7jDk7gAAAAJ&hl=zh-CN">Wenyu Liu</a> and Prof. <a href="https://xwcv.github.io/index.htm">Xinggang Wang</a>. Prior to this, I obtained my Bachelor's degree at the same university.
 
         
       </p>
@@ -72,7 +72,7 @@
 <!-- === News Starts === -->
 <br>
 <h2>News</h2>
-<ul>
+<ul id="news-list">
   <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.15824" target="_blank">FashionChameleon</a> for real-time human-garment video customization.</li>
   <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.07915" target="_blank">PAE</a> for diffusion-friendly latent manifolds.</li>
   <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.06376" target="_blank">CDM</a> for few-step diffusion distillation.</li>
@@ -83,12 +83,25 @@
   <li><strong>[02/2025]</strong> We have 1 paper accepted to <a href="https://cvpr.thecvf.com/" target="_blank">CVPR 2025</a> (Nashville, America).</li>
   <li><strong>[09/2024]</strong> We have 1 paper accepted to <a href="https://nips.cc/" target="_blank">NeurIPS 2024</a> (Vancouver, Canada).</li>
   <li><strong>[07/2024]</strong> We have 1 paper accepted to <a href="https://2024.acmmm.org/" target="_blank">ACM Multimedia 2024</a> (Melbourne, Australia).</li>
-  <li><strong>[07/2024]</strong> We have 2 papers accepted to <a href="https://eccv2024.ecva.net/" target="_blank">ECCV 2024</a> (Milano, Italy).</li>
-  <li><strong>[06/2024]</strong> We release <a href="https://arxiv.org/abs/2406.07547" target="_blank">MimicBrush</a> for zero-shot image editing.</li>
-  <li><strong>[05/2024]</strong> We release <a href="https://arxiv.org/abs/2404.17571" target="_blank">Tunnel Try-on</a> for video virtual try-on.</li>
-  <li><strong>[03/2024]</strong> We release <a href="https://arxiv.org/abs/2403.12965" target="_blank">Wear-Any-Way</a> for manipulable virtual try-on.</li>
-  <li><strong>[12/2023]</strong> We release <a href="https://arxiv.org/abs/2312.02928" target="_blank">LivePhoto</a> for image-to-video generation.</li>
+  <li class="more"><strong>[07/2024]</strong> We have 2 papers accepted to <a href="https://eccv2024.ecva.net/" target="_blank">ECCV 2024</a> (Milano, Italy).</li>
+  <li class="more"><strong>[06/2024]</strong> We release <a href="https://arxiv.org/abs/2406.07547" target="_blank">MimicBrush</a> for zero-shot image editing.</li>
+  <li class="more"><strong>[05/2024]</strong> We release <a href="https://arxiv.org/abs/2404.17571" target="_blank">Tunnel Try-on</a> for video virtual try-on.</li>
+  <li class="more"><strong>[03/2024]</strong> We release <a href="https://arxiv.org/abs/2403.12965" target="_blank">Wear-Any-Way</a> for manipulable virtual try-on.</li>
+  <li class="more"><strong>[12/2023]</strong> We release <a href="https://arxiv.org/abs/2312.02928" target="_blank">LivePhoto</a> for image-to-video generation.</li>
 </ul>
+<a id="news-toggle" href="#" style="font-size:14px;">Show 5 more &darr;</a>
+<script>
+(function() {
+  var toggle = document.getElementById('news-toggle');
+  var list = document.getElementById('news-list');
+  var hidden = list.querySelectorAll('li.more').length;
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    var expanded = list.classList.toggle('expanded');
+    toggle.innerHTML = expanded ? 'Show less &uarr;' : 'Show ' + hidden + ' more &darr;';
+  });
+})();
+</script>
 <!-- === News Ends === -->
 
 <!-- === Publication Starts === -->
@@ -134,7 +147,6 @@
     </td>
     <td>
       <div class="institution">Alibaba Group</div>
-      <div class="period">Jul. 2020. - Present</div>
       <div class="position">Algorithm Researcher</div>
     </td>
   </tr>
@@ -145,7 +157,6 @@
     </td>
     <td>
       <div class="institution">SenseTime</div>
-      <div class="period">Jun. 2019 - Apr. 2020</div>
       <div class="position">Algorithm Intern</div>
     </td>
   </tr>
@@ -156,7 +167,6 @@
     </td>
     <td>
       <div class="institution">Horizon Robotics</div>
-      <div class="period">Mar. 2017 - Mar. 2019</div>
       <div class="position">Algorithm Intern</div>
     </td>
   </tr>
@@ -167,7 +177,6 @@
     </td>
     <td>
       <div class="institution">Huazhong University of Science and Technology (HUST)</div>
-      <div class="period">Sep. 2017 - Jun. 2020</div>
       <div class="position">Master Degree in Artificial Intelligence</div>
     </td>
   </tr>
@@ -178,7 +187,6 @@
     </td>
     <td>
       <div class="institution">Huazhong University of Science and Technology (HUST)</div>
-      <div class="period">Sep. 2013 - Jun. 2017</div>
       <div class="position">Bachelor Degree in Electronic Information and Communications</div>
     </td>
   </tr>
