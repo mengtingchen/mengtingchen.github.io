@@ -50,12 +50,20 @@ function render_project(project_name,
     material.setAttribute('class', 'material');
     material_list.innerHTML = '';
     for (var idx = 0; idx < material_list.length; idx++) {
+        var label = material_list[idx][0];
+        var url = material_list[idx][1];
+        var badge = '';
+        if (label === 'Code') {
+            var m = url.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
+            if (m) {
+                var repo = m[1] + '/' + m[2].replace(/\.git$/, '');
+                badge = ' <img src="https://img.shields.io/github/stars/' +
+                    repo +
+                    '?style=social" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
+            }
+        }
         material.innerHTML += (
-            '<a href="' +
-            material_list[idx][1] +
-            '" target="_blank">' +
-            material_list[idx][0] +
-            '</a>');
+            '<a href="' + url + '" target="_blank">' + label + badge + '</a>');
         if (idx < material_list.length - 1) {
             material.innerHTML += ' / ';
         }
@@ -231,9 +239,9 @@ render_project(
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2605.07915'],
         ['Project', 'https://zhengrongyue.github.io/pae.github.io/'],
-        ['Code', 'https://github.com/ZhengrongYue/PAE'],
         ['HuggingFace', 'https://huggingface.co/yuezhengrong/PAE-collections'],
         ['ModelScope', 'https://www.modelscope.cn/models/ZhengrongYue/PAE-Collections'],
+        ['Code', 'https://github.com/ZhengrongYue/PAE'],
     ],
     award_name = null,
 );
@@ -256,8 +264,8 @@ render_project(
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2605.15824'],
         ['Project', 'https://quanjiansong.github.io/projects/FashionChameleon/'],
-        ['Code', 'https://github.com/quanjiansong/FashionChameleon'],
         ['HuggingFace', 'https://huggingface.co/datasets/QuanjianSong/HGC-Bench'],
+        ['Code', 'https://github.com/quanjiansong/FashionChameleon'],
     ],
     award_name = null,
 );
@@ -395,8 +403,8 @@ render_project(
     material_list = [
         ['ECCV 2024', 'https://arxiv.org/pdf/2312.02928.pdf'],
         ['Project', 'https://xavierchen34.github.io/LivePhoto-Page/'],
-        ['Code', 'https://github.com/XavierCHEN34/LivePhoto'],
         ['Demo', 'https://www.youtube.com/watch?v=M2vzrTYAsQI'],
+        ['Code', 'https://github.com/XavierCHEN34/LivePhoto'],
     ],
     award_name = null,
 );
@@ -457,8 +465,8 @@ render_project(
     material_list = [
         ['NeurIPS 2024', 'https://arxiv.org/abs/2406.07547'],
         ['Project', 'https://xavierchen34.github.io/MimicBrush-Page/'],
-        ['Code', 'https://github.com/ali-vilab/MimicBrush'],
         ['Demo', 'https://huggingface.co/spaces/xichenhku/MimicBrush'],
+        ['Code', 'https://github.com/ali-vilab/MimicBrush'],
     ],
     award_name = null,
 );
