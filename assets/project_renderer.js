@@ -164,7 +164,7 @@ render_project(
 // Projects.
 render_project(
     project_name = 'Tstars-Tryon',
-    figure_path = './assets/projects/Tstars-Tryon.png',
+    figure_path = './assets/projects/Tstars-Tryon.jpg',
     title_name = 'Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items',
     author_list = [
         'Mengting Chen',
@@ -345,7 +345,7 @@ render_project(
 
 render_project(
     project_name = 'Tunnel Try-on',
-    figure_path = './assets/projects/tunnel-try-on.png',
+    figure_path = './assets/projects/tunnel-try-on.gif',
     title_name = 'Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos',
     author_list = [
         'Zhengze Xu',
@@ -368,7 +368,7 @@ render_project(
 
 render_project(
     project_name = 'Wear-Any-Way',
-    figure_path = './assets/projects/wear-any-way.png',
+    figure_path = './assets/projects/wear-any-way.gif',
     title_name = 'Wear-Any-Way: Manipulable Virtual Try-on via Sparse Correspondence Alignment',
     author_list = [
         'Mengting Chen',
@@ -450,7 +450,7 @@ render_project(
 
 render_project(
     project_name = 'MimicBrush',
-    figure_path = './assets/projects/MimicBrush.png',
+    figure_path = './assets/projects/MimicBrush.gif',
     title_name = 'Zero-shot Image Editing with Reference Imitation',
     author_list = [
         'Xi Chen',
