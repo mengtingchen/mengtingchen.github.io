@@ -66,8 +66,18 @@ function render_project(project_name,
     for (var idx = 0; idx < material_list.length; idx++) {
         var label = material_list[idx][0];
         var url = material_list[idx][1];
+        var badge = '';
+        if (label === 'Code') {
+            var m = url.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
+            if (m) {
+                var repo = m[1] + '/' + m[2].replace(/\.git$/, '');
+                badge = ' <img src="https://img.shields.io/github/stars/' +
+                    repo +
+                    '?style=social" loading="lazy" decoding="async" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
+            }
+        }
         material.innerHTML += (
-            '<a href="' + url + '" target="_blank">' + label + '</a>');
+            '<a href="' + url + '" target="_blank">' + label + badge + '</a>');
         if (idx < material_list.length - 1) {
             material.innerHTML += ' / ';
         }
