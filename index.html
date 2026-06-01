@@ -202,8 +202,7 @@
   <tbody>
     <tr>
       <td style="padding:20px;width:10%;vertical-align:middle">
-        <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=P3btnch2zwQ-zRFYFRKpu9i0_moNNQPKlEf4WTIpiNQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
-        <!-- <a href="https://clustrmaps.com/site/1bzsz" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=P3btnch2zwQ-zRFYFRKpu9i0_moNNQPKlEf4WTIpiNQ&cl=ffffff"></a> -->
+        <div id="clustrmaps-slot"></div>
       </td>
     </tr>
   </tbody>
@@ -218,6 +217,17 @@
 
 <!-- Rendering Projects-->
 <script type="text/javascript" src="./assets/project_renderer.js?v=20260601b"></script>
+
+<!-- Visitor map: load after window 'load' so a slow / blocked CDN never delays first paint. -->
+<script>
+window.addEventListener('load', function () {
+  var s = document.createElement('script');
+  s.id = 'clustrmaps';
+  s.async = true;
+  s.src = '//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=P3btnch2zwQ-zRFYFRKpu9i0_moNNQPKlEf4WTIpiNQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff';
+  document.getElementById('clustrmaps-slot').appendChild(s);
+});
+</script>
 
 
 
