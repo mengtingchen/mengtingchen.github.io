@@ -10,9 +10,23 @@ function render_project(project_name,
         return;
     }
 
-    var img = document.createElement('img');
-    img.src = figure_path;
-    img.setAttribute('style',
+    var media;
+    if (/\.(mp4|webm)$/i.test(figure_path)) {
+        media = document.createElement('video');
+        media.src = figure_path;
+        media.autoplay = true;
+        media.loop = true;
+        media.muted = true;
+        media.playsInline = true;
+        media.setAttribute('playsinline', '');
+        media.setAttribute('preload', 'metadata');
+    } else {
+        media = document.createElement('img');
+        media.src = figure_path;
+        media.loading = 'lazy';
+        media.decoding = 'async';
+    }
+    media.setAttribute('style',
         'width: 100%; max-height: 120px; object-fit: cover;');
 
     var title = document.createElement('div');
@@ -59,7 +73,7 @@ function render_project(project_name,
                 var repo = m[1] + '/' + m[2].replace(/\.git$/, '');
                 badge = ' <img src="https://img.shields.io/github/stars/' +
                     repo +
-                    '?style=social" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
+                    '?style=social" loading="lazy" decoding="async" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
             }
         }
         material.innerHTML += (
@@ -78,7 +92,7 @@ function render_project(project_name,
     var row = document.getElementsByName(project_name)[0];
     var cell = row.insertCell(0);
     cell.setAttribute('width', '25%');
-    cell.appendChild(img);
+    cell.appendChild(media);
     cell = row.insertCell(1);
     cell.appendChild(title);
     cell.appendChild(author);
@@ -198,7 +212,7 @@ render_project(
 
 render_project(
     project_name = 'iTryOn',
-    figure_path = './assets/projects/itryon.gif',
+    figure_path = './assets/projects/itryon.mp4',
     title_name = 'iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance',
     author_list = [
         'Jun Zheng',
@@ -248,7 +262,7 @@ render_project(
 
 render_project(
     project_name = 'FashionChameleon',
-    figure_path = './assets/projects/FashionChameleon.gif',
+    figure_path = './assets/projects/FashionChameleon.mp4',
     title_name = 'FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization',
     author_list = [
         'Quanjian Song',
@@ -265,14 +279,14 @@ render_project(
         ['arXiv', 'https://arxiv.org/abs/2605.15824'],
         ['Project', 'https://quanjiansong.github.io/projects/FashionChameleon/'],
         ['HuggingFace', 'https://huggingface.co/datasets/QuanjianSong/HGC-Bench'],
-        ['Code', 'https://github.com/quanjiansong/FashionChameleon'],
+        ['Code', 'https://github.com/QuanjianSong/FashionChameleon'],
     ],
     award_name = null,
 );
 
 render_project(
     project_name = 'CTDM',
-    figure_path = './assets/projects/CTDM.png',
+    figure_path = './assets/projects/CTDM.jpg',
     title_name = 'Continuous-Time Distribution Matching for Few-Step Diffusion Distillation',
     author_list = [
         'Tao Liu',
@@ -291,14 +305,14 @@ render_project(
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2605.06376'],
         ['Project', 'https://byliutao.github.io/cdm_page/'],
-        ['Code', 'https://github.com/byliutao/cdm'],
+        ['Code', 'https://github.com/byliutao/CDM'],
     ],
     award_name = null,
 );
 
 render_project(
     project_name = 'Beyond-Static-Scenes',
-    figure_path = './assets/projects/Beyond-Static-Scenes.gif',
+    figure_path = './assets/projects/Beyond-Static-Scenes.mp4',
     title_name = 'Beyond Static Scenes: Camera-controllable Background Generation for Human Motion',
     author_list = [
         'Mingshuai Yao',
@@ -345,7 +359,7 @@ render_project(
 
 render_project(
     project_name = 'Tunnel Try-on',
-    figure_path = './assets/projects/tunnel-try-on.gif',
+    figure_path = './assets/projects/tunnel-try-on.mp4',
     title_name = 'Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos',
     author_list = [
         'Zhengze Xu',
@@ -368,7 +382,7 @@ render_project(
 
 render_project(
     project_name = 'Wear-Any-Way',
-    figure_path = './assets/projects/wear-any-way.gif',
+    figure_path = './assets/projects/wear-any-way.mp4',
     title_name = 'Wear-Any-Way: Manipulable Virtual Try-on via Sparse Correspondence Alignment',
     author_list = [
         'Mengting Chen',
@@ -389,7 +403,7 @@ render_project(
 
 render_project(
     project_name = 'LivePhoto',
-    figure_path = './assets/projects/livephoto.gif',
+    figure_path = './assets/projects/livephoto.mp4',
     title_name = 'LivePhoto: Real Image Animation with Text-guided Motion Control',
     author_list = [
         'Xi Chen',
@@ -450,7 +464,7 @@ render_project(
 
 render_project(
     project_name = 'MimicBrush',
-    figure_path = './assets/projects/MimicBrush.gif',
+    figure_path = './assets/projects/MimicBrush.mp4',
     title_name = 'Zero-shot Image Editing with Reference Imitation',
     author_list = [
         'Xi Chen',
