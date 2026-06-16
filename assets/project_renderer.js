@@ -73,7 +73,7 @@ function render_project(project_name,
                 var repo = m[1] + '/' + m[2].replace(/\.git$/, '');
                 badge = ' <img src="https://img.shields.io/github/stars/' +
                     repo +
-                    '?style=social" loading="lazy" decoding="async" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
+                    '?style=social&cacheSeconds=86400" loading="lazy" decoding="async" style="vertical-align:middle;height:18px;margin-left:4px;" alt="GitHub stars">';
             }
         }
         material.innerHTML += (
