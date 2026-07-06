@@ -177,6 +177,30 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'TryOnCrafter',
+    figure_path = './assets/projects/TryOnCrafter.mp4',
+    title_name = 'TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy',
+    author_list = [
+        'Hao Sun',
+        'Hao Yan',
+        'Mengting Chen',
+        'project_lead',
+        'Quanjian Song',
+        'Yu Li',
+        'Juan Cao',
+        'Jinsong Lan',
+        'Xiaoyong Zhu',
+        'Bo Zheng',
+        'Sheng Tang',
+    ],
+    material_list = [
+        ['ECCV 2026', 'https://arxiv.org/abs/2606.26092'],
+        ['Project', 'https://sunhao242.github.io/TryOnCrafter_web.github.io/'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'Tstars-Tryon',
     figure_path = './assets/projects/Tstars-Tryon.jpg',
     title_name = 'Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items',
@@ -521,6 +545,9 @@ render_author('Zikang Wang');
 render_author('Yali Wang');
 render_author('Quanjian Song');
 render_author('Hao Sun');
+render_author('Yu Li');
+render_author('Juan Cao');
+render_author('Sheng Tang');
 render_author('Liujuan Cao');
 render_author('Yabo Zhang');
 render_author('Ming Liu');
