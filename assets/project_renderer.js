@@ -177,6 +177,25 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'ExpertVerse',
+    figure_path = './assets/projects/ExpertVerse.jpg',
+    title_name = 'ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis',
+    author_list = [
+        'Yuan Wang',
+        'Yongchao Du',
+        'Mengting Chen',
+        'project_lead',
+        'Jinsong Lan',
+        'Xuetao Feng',
+        'Xiaoyong Zhu',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2607.19341'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'TryOnCrafter',
     figure_path = './assets/projects/TryOnCrafter.mp4',
     title_name = 'TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy',
@@ -582,4 +601,6 @@ render_author('Zhao Wang');
 render_author('Zhengze Xu', 'https://scholar.google.co.uk/citations?user=ItKODP4AAAAJ&hl=en');
 render_author('Zhiheng Liu', 'https://johanan528.github.io/');
 render_author('Zhonghua Zhai', 'https://scholar.google.com.hk/citations?hl=zh-CN&user=o4SDCAYAAAAJ');
+render_author('Xuetao Feng');
+render_author('Yuan Wang');
 render_author('');
