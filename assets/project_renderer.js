@@ -191,6 +191,7 @@ render_project(
     ],
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2607.19341'],
+        ['Project', 'https://wangyuan123ac.github.io/expertverse.github.io/'],
     ],
     award_name = null,
 );
