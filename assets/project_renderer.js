@@ -110,7 +110,7 @@ function render_author(author_name, link = null, alias = null) {
         if (contribution === 'equal') {
             tailing = '*';
         } else if (contribution === 'corresponding') {
-            tailing = '<sup>+<sup>';
+            tailing = '<sup title="Corresponding author">&#9993;</sup>';
         } else if (contribution === 'project_lead') {
             tailing = '<sup>&dagger;</sup>';
         }
@@ -176,6 +176,42 @@ render_project(
 
 
 // Projects.
+render_project(
+    project_name = 'CPI-Bench',
+    figure_path = './assets/projects/CPI-Bench.png',
+    title_name = 'CPI-Bench: A Comprehensive, Practical and Intelligent Benchmark for Real-World Image Editing',
+    author_list = [
+        'Qinye Zhou',
+        'Jun Zheng',
+        'Yongchao Du',
+        'Yuan Wang',
+        'Zhengrui Chen',
+        'Zuan Gao',
+        'Taihang Hu',
+        'Chao Lin',
+        'Yefeng Shen',
+        'Xingjian Wang',
+        'Zhao Wang',
+        'Zhengtao Wu',
+        'Xiaoli Xu',
+        'Zhengze Xu',
+        'Hao Yan',
+        'Denghui Yang',
+        'Yuhang Yu',
+        'Huayu Zhang',
+        'Mingzhou Zhang',
+        'Mengting Chen',
+        'corresponding',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2608.14546v1'],
+        ['HuggingFace', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/CPI-benchmark'],
+        ['ModelScope', 'https://modelscope.cn/datasets/TaoTianGroup/CPI-benchmark'],
+        ['Code', 'https://github.com/zqyzzz/CPI-benchmark'],
+    ],
+    award_name = null,
+);
+
 render_project(
     project_name = 'ExpertVerse',
     figure_path = './assets/projects/ExpertVerse.jpg',
@@ -545,6 +581,9 @@ render_author('Xingjian Wang');
 render_author('Xiaoli Xu');
 render_author('Zhengtao Wu');
 render_author('Hao Yan');
+render_author('Denghui Yang');
+render_author('Yuhang Yu');
+render_author('Huayu Zhang');
 render_author('Mingzhou Zhang');
 render_author('Qinye Zhou');
 
