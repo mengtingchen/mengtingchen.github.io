@@ -177,6 +177,36 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'CapabilityData',
+    figure_path = './assets/projects/CapabilityData.png',
+    title_name = 'From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation',
+    author_list = [
+        'Xingjian Wang',
+        'Zhao Wang',
+        'Taihang Hu',
+        'Jun Zheng',
+        'Qing Jin',
+        'Qinye Zhou',
+        'Zhengtao Wu',
+        'Yongchao Du',
+        'Zuan Gao',
+        'Chao Lin',
+        'Yefeng Shen',
+        'Xiaoli Xu',
+        'Zhengze Xu',
+        'Hao Yan',
+        'Yuhang Yu',
+        'Mingzhou Zhang',
+        'Mengting Chen',
+        'corresponding',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2608.18076v1'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'CPI-Bench',
     figure_path = './assets/projects/CPI-Bench.png',
     title_name = 'CPI-Bench: A Comprehensive, Practical and Intelligent Benchmark for Real-World Image Editing',
@@ -581,6 +611,7 @@ render_author('Xingjian Wang');
 render_author('Xiaoli Xu');
 render_author('Zhengtao Wu');
 render_author('Hao Yan');
+render_author('Qing Jin');
 render_author('Denghui Yang');
 render_author('Yuhang Yu');
 render_author('Huayu Zhang');
