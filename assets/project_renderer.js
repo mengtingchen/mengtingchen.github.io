@@ -598,7 +598,7 @@ render_project(
 
 
 // Authors.
-render_author('Jun Zheng');
+render_author('Jun Zheng', 'https://scholar.google.com/citations?hl=en&user=sXKJBsUAAAAJ');
 render_author('Jing Wang');
 render_author('Xiaodan Liang');
 render_author('Zhengrui Chen');
@@ -624,7 +624,7 @@ render_author('Kaifu Zhang');
 render_author('Ming-Ming Cheng');
 render_author('Bo Zheng');
 render_author('Yaxing Wang');
-render_author('Taihang Hu');
+render_author('Taihang Hu', 'https://scholar.google.com/citations?hl=en_US&user=JtjoOmEAAAAJ');
 render_author('Mingshuai Yao');
 render_author('Qingwen Liu');
 render_author('Tao Liu');
