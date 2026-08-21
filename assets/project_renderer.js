@@ -177,6 +177,40 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'Swift-Image',
+    figure_path = './assets/projects/Swift-Image.png',
+    title_name = 'Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models',
+    author_list = [
+        'Taihang Hu',
+        'Zhao Wang',
+        'Zuan Gao',
+        'Tao Liu',
+        'Hao Yan',
+        'Zhengze Xu',
+        'Yuhang Yu',
+        'Yongchao Du',
+        'Xingjian Wang',
+        'Jun Zheng',
+        'Qinye Zhou',
+        'Zhengrui Chen',
+        'Chao Lin',
+        'Yefeng Shen',
+        'Zhengtao Wu',
+        'Ge Wu',
+        'Xiaoli Xu',
+        'Denghui Yang',
+        'Huayu Zhang',
+        'Mingzhou Zhang',
+        'Mengting Chen',
+        'corresponding',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2608.20334v1'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'CapabilityData',
     figure_path = './assets/projects/CapabilityData.png',
     title_name = 'From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation',
@@ -617,6 +651,7 @@ render_author('Yuhang Yu');
 render_author('Huayu Zhang');
 render_author('Mingzhou Zhang');
 render_author('Qinye Zhou');
+render_author('Ge Wu');
 
 
 render_author('Xiaoyong Zhu');
