@@ -395,7 +395,7 @@ render_project(
         'Yali Wang',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2605.07915'],
+        ['NeurIPS 2026', 'https://arxiv.org/abs/2605.07915'],
         ['Project', 'https://zhengrongyue.github.io/pae.github.io/'],
         ['HuggingFace', 'https://huggingface.co/yuezhengrong/PAE-collections'],
         ['ModelScope', 'https://www.modelscope.cn/models/ZhengrongYue/PAE-Collections'],
@@ -420,7 +420,7 @@ render_project(
         'Liujuan Cao',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2605.15824'],
+        ['NeurIPS 2026', 'https://arxiv.org/abs/2605.15824'],
         ['Project', 'https://quanjiansong.github.io/projects/FashionChameleon/'],
         ['HuggingFace', 'https://huggingface.co/datasets/QuanjianSong/HGC-Bench'],
         ['Code', 'https://github.com/QuanjianSong/FashionChameleon'],
@@ -447,7 +447,7 @@ render_project(
         'Yaxing Wang',
     ],
     material_list = [
-        ['arXiv', 'https://arxiv.org/abs/2605.06376'],
+        ['NeurIPS 2026', 'https://arxiv.org/abs/2605.06376'],
         ['Project', 'https://byliutao.github.io/cdm_page/'],
         ['Code', 'https://github.com/byliutao/CDM'],
     ],
