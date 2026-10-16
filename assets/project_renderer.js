@@ -177,6 +177,32 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'CommerceGen-Studio',
+    figure_path = './assets/projects/CommerceGen-Studio.png',
+    title_name = 'CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation',
+    author_list = [
+        'Xiaoli Xu',
+        'Zhengtao Wu',
+        'Zhengze Xu',
+        'Tao Liu',
+        'Yongchao Du',
+        'Zuan Gao',
+        'Xingjian Wang',
+        'Hao Yan',
+        'Mengting Chen',
+        'project_lead',
+        'Wei Li',
+        'Bo Zheng',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2610.20603'],
+        ['HuggingFace', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/CommerceGen-Bench'],
+        ['ModelScope', 'https://modelscope.cn/datasets/TaoTianGroup/CommerceGen-Bench'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'Swift-Image',
     figure_path = './assets/projects/Swift-Image.png',
     title_name = 'Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models',
@@ -632,6 +658,7 @@ render_project(
 
 
 // Authors.
+render_author('Wei Li');
 render_author('Jun Zheng', 'https://scholar.google.com/citations?hl=en&user=sXKJBsUAAAAJ');
 render_author('Jing Wang');
 render_author('Xiaodan Liang');
