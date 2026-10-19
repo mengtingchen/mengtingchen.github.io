@@ -203,6 +203,31 @@ render_project(
 );
 
 render_project(
+    project_name = 'Representation-Guidance',
+    figure_path = './assets/projects/Representation-Guidance.png',
+    title_name = 'Learning Representations to Guide Pixel Diffusion Transformers',
+    author_list = [
+        'Zihao Pan',
+        'Mengting Chen',
+        'project_lead',
+        'Cheng Shi',
+        'Taihang Hu',
+        'Zhengrong Yue',
+        'Zikang Wang',
+        'Yuan Wang',
+        'Wei Li',
+        'Sibei Yang',
+        'corresponding',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2610.12978'],
+        ['Project', 'https://pan-zihao.github.io/Representation-Guidance/'],
+        ['Code', 'https://github.com/Pan-Zihao/Representation-Guidance'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'Swift-Image',
     figure_path = './assets/projects/Swift-Image.png',
     title_name = 'Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models',
@@ -658,6 +683,8 @@ render_project(
 
 
 // Authors.
+render_author('Cheng Shi', 'https://chengshiest.github.io/');
+render_author('Sibei Yang', 'https://sibeiyang.github.io/');
 render_author('Wei Li');
 render_author('Jun Zheng', 'https://scholar.google.com/citations?hl=en&user=sXKJBsUAAAAJ');
 render_author('Jing Wang');
