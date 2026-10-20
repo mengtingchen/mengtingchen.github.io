@@ -1,3 +1,56 @@
+// Public repository download counts; failures leave the original link usable.
+function add_download_count(link, url) {
+    var parsed = new URL(url);
+    var parts = parsed.pathname.split('/').filter(Boolean);
+    var endpoint;
+    var isHuggingFace = parsed.hostname === 'huggingface.co';
+    var isModelScope = /^(www\.)?modelscope\.cn$/.test(parsed.hostname);
+    if (isHuggingFace) {
+        if (parts[0] === 'spaces' || parts[0] === 'collections') return;
+        var type = parts[0] === 'datasets' ? parts.shift() : 'models';
+        if (parts.length !== 2) return;
+        endpoint = 'https://huggingface.co/api/' + type + '/' + parts.join('/');
+    } else if (isModelScope) {
+        if (!/^(models|datasets)$/.test(parts[0]) || parts.length !== 3) return;
+        endpoint = 'https://modelscope.cn/api/v1/' + parts.join('/');
+    } else {
+        return;
+    }
+
+    var count = document.createElement('span');
+    count.style.cssText = 'font-size:12px;color:#6b7280;white-space:nowrap;margin-left:4px;';
+    var period = isHuggingFace ? 'Downloads in the last 30 days' : 'Total downloads on ModelScope';
+    count.title = period;
+    link.appendChild(count);
+    var key = 'repository-downloads:' + endpoint;
+    function show(value) {
+        count.textContent = ' \u2193 ' + value.toLocaleString('en-US') + (isHuggingFace ? '/mo' : '');
+        count.setAttribute('aria-label', period + ': ' + value);
+    }
+    var cached;
+    try {
+        cached = JSON.parse(localStorage.getItem(key));
+        if (cached && typeof cached.value === 'number' && Number.isFinite(cached.value) && cached.value >= 0) {
+            show(cached.value);
+            if (Date.now() - cached.time < 3600000) return;
+        }
+    } catch (e) { /* Storage may be unavailable. */ }
+    var controller = new AbortController();
+    var timeout = setTimeout(function() { controller.abort(); }, 8000);
+    fetch(endpoint, {signal: controller.signal}).then(function(response) {
+        if (!response.ok) throw new Error('Download statistics unavailable');
+        return response.json();
+    }).then(function(data) {
+        var value = isHuggingFace ? data.downloads : data.Data && data.Data.Downloads;
+        if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) return;
+        show(value);
+        try {
+            localStorage.setItem(key, JSON.stringify({value: value, time: Date.now()}));
+        } catch (e) { /* Rendering does not depend on storage. */ }
+    }).catch(function() { /* Keep a cached count or the plain repository link. */ })
+      .finally(function() { clearTimeout(timeout); });
+}
+
 // Functions.
 
 function render_project(project_name,
@@ -82,6 +135,10 @@ function render_project(project_name,
             material.innerHTML += ' / ';
         }
     }
+
+    material.querySelectorAll('a').forEach(function(link) {
+        add_download_count(link, link.href);
+    });
 
     if (award_name) {
         var award = document.createElement('div');

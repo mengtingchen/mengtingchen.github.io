@@ -83,26 +83,33 @@
   <li><strong>[06/2026]</strong> We have 1 paper accepted to <a href="https://eccv.ecva.net/" target="_blank">ECCV 2026</a> (Malmö, Sweden).</li>
   <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.15824" target="_blank">FashionChameleon</a> for real-time human-garment video customization.</li>
   <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.07915" target="_blank">PAE</a> for diffusion-friendly latent manifolds.</li>
-  <li><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.06376" target="_blank">CDM</a> for few-step diffusion distillation.</li>
-  <li><strong>[05/2026]</strong> We have 1 paper accepted to <a href="https://icml.cc/" target="_blank">ICML 2026</a> (Seoul, South Korea).</li>
-  <li><strong>[04/2026]</strong> We release <a href="https://arxiv.org/abs/2604.19748" target="_blank">Tstars-Tryon 1.0</a> as the commercial SOTA Virtual Try-On model with a benchmark.</li>
-  <li><strong>[03/2026]</strong> We have 1 paper accepted to <a href="https://2026.ieeeicme.org/" target="_blank">ICME 2026</a> (Bangkok, Thailand).</li>
-  <li><strong>[01/2026]</strong> We have 1 paper accepted to <a href="https://iclr.cc/" target="_blank">ICLR 2026</a> (Rio, Brazil).</li>
-  <li><strong>[02/2025]</strong> We have 1 paper accepted to <a href="https://cvpr.thecvf.com/" target="_blank">CVPR 2025</a> (Nashville, America).</li>
-  <li><strong>[09/2024]</strong> We have 1 paper accepted to <a href="https://nips.cc/" target="_blank">NeurIPS 2024</a> (Vancouver, Canada).</li>
-  <li><strong>[07/2024]</strong> We have 1 paper accepted to <a href="https://2024.acmmm.org/" target="_blank">ACM Multimedia 2024</a> (Melbourne, Australia).</li>
+  <li class="more"><strong>[05/2026]</strong> We release <a href="https://arxiv.org/abs/2605.06376" target="_blank">CDM</a> for few-step diffusion distillation.</li>
+  <li class="more"><strong>[05/2026]</strong> We have 1 paper accepted to <a href="https://icml.cc/" target="_blank">ICML 2026</a> (Seoul, South Korea).</li>
+  <li class="more"><strong>[04/2026]</strong> We release <a href="https://arxiv.org/abs/2604.19748" target="_blank">Tstars-Tryon 1.0</a> as the commercial SOTA Virtual Try-On model with a benchmark.</li>
+  <li class="more"><strong>[03/2026]</strong> We have 1 paper accepted to <a href="https://2026.ieeeicme.org/" target="_blank">ICME 2026</a> (Bangkok, Thailand).</li>
+  <li class="more"><strong>[01/2026]</strong> We have 1 paper accepted to <a href="https://iclr.cc/" target="_blank">ICLR 2026</a> (Rio, Brazil).</li>
+  <li class="more"><strong>[02/2025]</strong> We have 1 paper accepted to <a href="https://cvpr.thecvf.com/" target="_blank">CVPR 2025</a> (Nashville, America).</li>
+  <li class="more"><strong>[09/2024]</strong> We have 1 paper accepted to <a href="https://nips.cc/" target="_blank">NeurIPS 2024</a> (Vancouver, Canada).</li>
+  <li class="more"><strong>[07/2024]</strong> We have 1 paper accepted to <a href="https://2024.acmmm.org/" target="_blank">ACM Multimedia 2024</a> (Melbourne, Australia).</li>
   <li class="more"><strong>[07/2024]</strong> We have 2 papers accepted to <a href="https://eccv2024.ecva.net/" target="_blank">ECCV 2024</a> (Milano, Italy).</li>
   <li class="more"><strong>[06/2024]</strong> We release <a href="https://arxiv.org/abs/2406.07547" target="_blank">MimicBrush</a> for zero-shot image editing.</li>
   <li class="more"><strong>[05/2024]</strong> We release <a href="https://arxiv.org/abs/2404.17571" target="_blank">Tunnel Try-on</a> for video virtual try-on.</li>
   <li class="more"><strong>[03/2024]</strong> We release <a href="https://arxiv.org/abs/2403.12965" target="_blank">Wear-Any-Way</a> for manipulable virtual try-on.</li>
   <li class="more"><strong>[12/2023]</strong> We release <a href="https://arxiv.org/abs/2312.02928" target="_blank">LivePhoto</a> for image-to-video generation.</li>
 </ul>
-<a id="news-toggle" href="#" style="font-size:14px;">Show 5 more &darr;</a>
+<a id="news-toggle" href="#" style="font-size:14px;">Show 13 more &darr;</a>
 <script>
 (function() {
   var toggle = document.getElementById('news-toggle');
   var list = document.getElementById('news-list');
-  var hidden = list.querySelectorAll('li.more').length;
+  var items = list.querySelectorAll('li');
+  for (var i = 0; i < items.length; i++) {
+    items[i].classList.toggle('more', i >= 10);
+  }
+  var hidden = Math.max(0, items.length - 10);
+  toggle.hidden = hidden === 0;
+  toggle.style.display = hidden ? 'inline-block' : 'none';
+  toggle.innerHTML = 'Show ' + hidden + ' more &darr;';
   toggle.addEventListener('click', function(e) {
     e.preventDefault();
     var expanded = list.classList.toggle('expanded');
@@ -231,7 +238,7 @@
 <!-- === Homepage Ends === -->
 
 <!-- Rendering Projects-->
-<script type="text/javascript" src="./assets/project_renderer.js?v=20261019a"></script>
+<script type="text/javascript" src="./assets/project_renderer.js?v=20261020a"></script>
 
 <!-- Visitor map: load after window 'load' so a slow / blocked CDN never delays first paint. -->
 <script>
