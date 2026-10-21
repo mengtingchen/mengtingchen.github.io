@@ -24,6 +24,7 @@ function add_download_count(link, url) {
     link.appendChild(count);
     var key = 'repository-downloads:' + endpoint;
     function show(value) {
+        count.hidden = value < 10;
         count.textContent = ' \u2193 ' + value.toLocaleString('en-US') + (isHuggingFace ? '/mo' : '');
         count.setAttribute('aria-label', period + ': ' + value);
     }
@@ -456,7 +457,8 @@ render_project(
     ],
     material_list = [
         ['Report', 'https://arxiv.org/abs/2604.19748'],
-        ['Benchmark', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/Tstars-VTON'],
+        ['HuggingFace', 'https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/Tstars-VTON'],
+        ['ModelScope', 'https://modelscope.cn/datasets/TaoTianGroup/Tstars-VTON'],
         ['Media', 'https://mp.weixin.qq.com/s/9xsNpPF5bKI3L5V1cRvB_w'],
     ],
     award_name = null,
