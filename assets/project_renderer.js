@@ -9,7 +9,7 @@ function add_download_count(link, url) {
         if (parts[0] === 'spaces' || parts[0] === 'collections') return;
         var type = parts[0] === 'datasets' ? parts.shift() : 'models';
         if (parts.length !== 2) return;
-        endpoint = 'https://huggingface.co/api/' + type + '/' + parts.join('/');
+        endpoint = 'https://huggingface.co/api/' + type + '/' + parts.join('/') + '?expand[]=downloadsAllTime';
     } else if (isModelScope) {
         if (!/^(models|datasets)$/.test(parts[0]) || parts.length !== 3) return;
         endpoint = 'https://modelscope.cn/api/v1/' + parts.join('/');
@@ -18,14 +18,15 @@ function add_download_count(link, url) {
     }
 
     var count = document.createElement('span');
-    count.style.cssText = 'font-size:12px;color:#6b7280;white-space:nowrap;margin-left:4px;';
-    var period = isHuggingFace ? 'Downloads in the last 30 days' : 'Total downloads on ModelScope';
+    count.className = 'download-count';
+    count.hidden = true;
+    var period = isHuggingFace ? 'Total downloads on Hugging Face' : 'Total downloads on ModelScope';
     count.title = period;
     link.appendChild(count);
     var key = 'repository-downloads:' + endpoint;
     function show(value) {
         count.hidden = value < 10;
-        count.textContent = ' \u2193 ' + value.toLocaleString('en-US') + (isHuggingFace ? '/mo' : '');
+        count.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span>' + value.toLocaleString('en-US') + '</span>';
         count.setAttribute('aria-label', period + ': ' + value);
     }
     var cached;
@@ -42,7 +43,7 @@ function add_download_count(link, url) {
         if (!response.ok) throw new Error('Download statistics unavailable');
         return response.json();
     }).then(function(data) {
-        var value = isHuggingFace ? data.downloads : data.Data && data.Data.Downloads;
+        var value = isHuggingFace ? data.downloadsAllTime : data.Data && data.Data.Downloads;
         if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) return;
         show(value);
         try {
