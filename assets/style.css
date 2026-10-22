@@ -160,25 +160,38 @@ img {
   border-radius: 0;
 }
 
-/* Download totals next to repository links. */
+/* Match the compact social GitHub star badges. */
 .download-count {
   display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: 6px;
-  padding: 1px 7px;
-  color: #0757ad;
-  background: #eaf3ff;
-  border: 1px solid #b8d7ff;
-  border-radius: 6px;
-  font-size: 13px;
+  align-items: stretch;
+  height: 18px;
+  box-sizing: border-box;
+  margin-left: 4px;
+  overflow: hidden;
+  color: #24292f;
+  border: 1px solid #c9cdd1;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 16px;
   vertical-align: middle;
   white-space: nowrap;
 }
 .download-count[hidden] {
   display: none;
+}
+.download-count-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 4px;
+  background: linear-gradient(#fafbfc, #eff1f3);
+}
+.download-count-value {
+  padding: 0 5px;
+  background: #ffffff;
+  border-left: 1px solid #c9cdd1;
 }
 .download-count svg {
   flex-shrink: 0;

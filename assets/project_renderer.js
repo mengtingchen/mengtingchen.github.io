@@ -26,7 +26,7 @@ function add_download_count(link, url) {
     var key = 'repository-downloads:' + endpoint;
     function show(value) {
         count.hidden = value < 10;
-        count.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span>' + value.toLocaleString('en-US') + '</span>';
+        count.innerHTML = '<span class="download-count-label"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg> Downloads</span><span class="download-count-value">' + value.toLocaleString('en-US') + '</span>';
         count.setAttribute('aria-label', period + ': ' + value);
     }
     var cached;
