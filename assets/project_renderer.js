@@ -236,6 +236,26 @@ render_project(
 
 // Projects.
 render_project(
+    project_name = 'CheckDistill',
+    figure_path = './assets/projects/CheckDistill.png',
+    title_name = 'CheckDistill: Adaptive Checklist Distillation for Efficient Distributional Reward Modeling in Image Editing',
+    author_list = [
+        'Yaqi Cai',
+        'Zuan Gao',
+        'Mengting Chen',
+        'project_lead',
+        'Wei Li',
+        'Bo Zheng',
+        'corresponding',
+    ],
+    material_list = [
+        ['arXiv', 'https://arxiv.org/abs/2610.26740v1'],
+        ['Project', 'https://faltingsa.github.io/CheckDistill.github.io/'],
+    ],
+    award_name = null,
+);
+
+render_project(
     project_name = 'CommerceGen-Studio',
     figure_path = './assets/projects/CommerceGen-Studio.png',
     title_name = 'CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation',
@@ -743,6 +763,7 @@ render_project(
 
 
 // Authors.
+render_author('Yaqi Cai');
 render_author('Cheng Shi', 'https://chengshiest.github.io/');
 render_author('Sibei Yang', 'https://sibeiyang.github.io/');
 render_author('Wei Li');
