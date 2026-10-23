@@ -246,7 +246,6 @@ render_project(
         'project_lead',
         'Wei Li',
         'Bo Zheng',
-        'corresponding',
     ],
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2610.26740v1'],
@@ -296,7 +295,6 @@ render_project(
         'Yuan Wang',
         'Wei Li',
         'Sibei Yang',
-        'corresponding',
     ],
     material_list = [
         ['arXiv', 'https://arxiv.org/abs/2610.12978'],
